@@ -30,7 +30,7 @@ export default function Home() {
 							Install HelpMeOut
 						</a>
 						<Link
-							href="/Myvideos"
+							href="/myvideos"
 							className="text-[18px] font-[500] text-white bg-blue-950 w-[230px] h-[65px] text-center p-[22px] border rounded-xl mt-[20px]"
 						>
 							Recent Videos
