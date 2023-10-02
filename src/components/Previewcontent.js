@@ -45,7 +45,7 @@ export default function Previewcontent() {
 				</div>
 				<div>
 					<label
-						for="website"
+						htmlFor="website"
 						className="text-black font-semibold text-[20px] leading-normal"
 					>
 						Video Url
@@ -53,8 +53,8 @@ export default function Previewcontent() {
 					<div className="md:px-[24px] w-full py-[12px] bg-gray-100  border rounded-xl flex justify-between p-3">
 						<input
 							className="bg-gray-100 w-full"
-							type="email"
-							id="email"
+							type="url"
+							id="url"
 							name="email"
 							placeholder="https://www.helpmeout/Untitled_Video_20232509"
 						/>
