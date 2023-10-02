@@ -62,7 +62,7 @@ export default function myvideos() {
 			<div className="w-full h-full  px-[100px] flex flex-col ">
 				<h1 className="pt-[30px] pb-[20px] text-[18px] font-[500]">Recent files: </h1>
 				<div>
-					<div className="videocard border border-gray-200 rounded-[24px] w-[470px] h-[290px] p-[15px] flex flex-col items-center bg-gray-100">
+					<Link href="/previewpage" className="videocard border border-gray-200 rounded-[24px] w-[470px] h-[290px] p-[15px] flex flex-col items-center bg-gray-100">
 						<div className="thumbnail relative w-[446px] h-[200px] border rounded-[24px] overflow-hidden">
 							<Image
 								src="/images/thumbnail.png"
@@ -82,7 +82,7 @@ export default function myvideos() {
                 <div className="w-[1px] h-[1px] bg-gray-900"></div>
               </div>
 						</div>
-					</div>
+					</Link>
 				</div>
 			</div>
 		</div>
