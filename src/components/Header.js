@@ -9,7 +9,7 @@ export default function Header() {
 				src="/images/helpmeout.png"
 				fill={true}
 				alt="help me out logo" 
-				style={{onjectFit: "contain"}}
+				style={{objectFit: "contain"}}
 				/>
 				</div>
 				<h1 className="header-logo text-[16px] font-bold leading-normal">HelpMeOut</h1>
