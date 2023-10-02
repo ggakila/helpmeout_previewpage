@@ -2,13 +2,14 @@ import Header from "@/components/Header";
 import React from "react";
 import Image from "next/image";
 import Footer from "@/components/Footer";
+import Link from "next/link"
 
 export default function Homepage() {
 	return (
 		<div className="overflow-x-hidden">
 			<Header className="" />
 			<div className="home-content h-full  flex px-[100px]">
-				<div className="left w-1/2 flex flex-col flex-wrap justify-center pr-[80px] py-[250px]">
+				<div className="left w-1/2 flex flex-col flex-wrap justify-center pr-[80px] py-[250px] ">
 					<h1 className="text-[64px] font-bold leading-[100%] wrap">
 						Show Them{" "}
 					</h1>
@@ -19,12 +20,21 @@ export default function Homepage() {
 						Help your friends and loved ones by creating and sending videos on
 						how to get things done on a website.
 					</p>
-					<a
-						href="https://github.com/ggakila/chrome_ext"
-						className="text-[18px] font-[500] text-white bg-blue-950 w-[230px] h-[65px] text-center p-[22px] border rounded-xl mt-[40px]"
-					>
-						Install HelpMeOut
-					</a>
+
+					<div className="mt-[50px]">
+						<a
+							href="https://github.com/ggakila/chrome_ext"
+							className="text-[18px] font-[500] text-white bg-blue-950 w-[230px] h-[65px] text-center p-[22px] border rounded-xl mt-[40px]"
+						>
+							Install HelpMeOut
+						</a>
+						<Link
+							href="/Myvideos"
+							className="text-[18px] font-[500] text-white bg-blue-950 w-[230px] h-[65px] text-center p-[22px] border rounded-xl mt-[40px]"
+						>
+							Go to Recent Videos
+						</Link>
+					</div>
 				</div>
 				<div className="right md:w-1/2  flex items-center">
 					<div className="images-container flex gap-[14px]">
@@ -136,11 +146,15 @@ export default function Homepage() {
 			</div>
 			<div className="howitworks flex h-full w-screen  flex-col items-center py-[50px] px-[100px]">
 				<h1 className="text-[40px] font-[700] leading-normal">How it works</h1>
-				<div className="w-full h-full flex justify-center mt-[50px] gap-[60px]">
-					<div className="w-[350px] h-full flex flex-col items-center gap-[20px]">
-						<div className=" namba w-[65px]  h-[60px] flex justify-center text-center bg-blue-900 border rounded-full text-white text-[32px]">1</div>
+				<div className="w-full h-full flex justify-center mt-[50px] gap-[80px] m-10">
+					<div className="w-[350px] h-full flex flex-col items-center gap-[40px]">
+						<div className=" namba w-[70px]  h-[70px] flex justify-center items-center bg-blue-900 border rounded-full text-white text-[32px]">
+							1
+						</div>
 						<div className="flex flex-col items-center">
-							<h1 className="text-[28px] font-[600] leading-normal">Record Screen</h1>
+							<h1 className="text-[28px] font-[600] leading-normal">
+								Record Screen
+							</h1>
 							<p className="text-[20px] text-gray-600 font-[400]">
 								Click the "Start Recording" button in our extension. choose
 								which part of your screen to capture and who you want to send it
@@ -149,7 +163,7 @@ export default function Homepage() {
 						</div>
 						<div className="relative w-[357px] h-[251px] border rounded-3xl overflow-hidden">
 							<Image
-              className="border "
+								className="border "
 								src="/images/works.png"
 								fill={true}
 								alt="help me out logo"
@@ -157,10 +171,14 @@ export default function Homepage() {
 							/>
 						</div>
 					</div>
-          <div className="w-[350px] h-full flex flex-col items-center gap-[20px]">
-						<div className=" namba w-[65px]  h-[60px] flex justify-center text-center bg-blue-900 border rounded-full text-white text-[32px]">1</div>
+					<div className="w-[350px] h-full flex flex-col items-center gap-[40px]">
+						<div className=" namba w-[70px]  h-[70px] flex justify-center items-center bg-blue-900 border rounded-full text-white text-[32px]">
+							1
+						</div>
 						<div className="flex flex-col items-center">
-							<h1 className="text-[28px] font-[600] leading-normal">Record Screen</h1>
+							<h1 className="text-[28px] font-[600] leading-normal">
+								Record Screen
+							</h1>
 							<p className="text-[20px] text-gray-600 font-[400]">
 								Click the "Start Recording" button in our extension. choose
 								which part of your screen to capture and who you want to send it
@@ -169,7 +187,7 @@ export default function Homepage() {
 						</div>
 						<div className="relative w-[357px] h-[251px] border rounded-3xl overflow-hidden">
 							<Image
-              className="border "
+								className="border "
 								src="/images/works.png"
 								fill={true}
 								alt="help me out logo"
@@ -177,10 +195,14 @@ export default function Homepage() {
 							/>
 						</div>
 					</div>
-          <div className="w-[350px] h-full flex flex-col items-center gap-[20px]">
-						<div className=" namba w-[65px]  h-[60px] flex justify-center text-center bg-blue-900 border rounded-full text-white text-[32px]">1</div>
+					<div className="w-[350px] h-full flex flex-col items-center gap-[40px]">
+						<div className=" namba w-[70px]  h-[70px] flex justify-center items-center bg-blue-900 border rounded-full text-white text-[32px]">
+							1
+						</div>
 						<div className="flex flex-col items-center">
-							<h1 className="text-[28px] font-[600] leading-normal">Record Screen</h1>
+							<h1 className="text-[28px] font-[600] leading-normal">
+								Record Screen
+							</h1>
 							<p className="text-[20px] text-gray-600 font-[400]">
 								Click the "Start Recording" button in our extension. choose
 								which part of your screen to capture and who you want to send it
@@ -189,7 +211,7 @@ export default function Homepage() {
 						</div>
 						<div className="relative w-[357px] h-[251px] border rounded-3xl overflow-hidden">
 							<Image
-              className="border "
+								className="border "
 								src="/images/works.png"
 								fill={true}
 								alt="help me out logo"
