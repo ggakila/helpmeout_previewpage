@@ -42,7 +42,18 @@ export default function Previewcontent() {
 					</div>
 				</div>
 			</div>
-			<div className="right w-1/2"></div>
+			<div className="right w-1/2">
+				<video
+					controls
+					width="100%"
+					height="auto"
+				>
+					<source
+						src="https://www.example.com/path-to-your-video.mp4"
+						type="video/mp4"
+					/>
+				</video>
+			</div>
 		</div>
 	);
 	a;
