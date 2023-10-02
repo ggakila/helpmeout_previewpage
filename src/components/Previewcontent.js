@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Previewcontent() {
 	return (
-		<div className="h-[600px] bg-gray-200 w-full pt-[40px] flex">
+		<div className="h-[600px]  w-full pt-[40px] flex">
 			<div className="left w-1/2 flex flex-col gap-[50px]">
 				<h1 className="readyvideo text-black text-[45px] font-bold">
 					Your video is ready!
@@ -17,24 +17,28 @@ export default function Previewcontent() {
 				</div>
 				<div className="px-[24px] py-[12px] bg-gray-100 w-2/3 border rounded-xl flex justify-between ">
 					<input
-						className="bg-gray-200"
+						className="bg-gray-100 w-full"
 						type="email"
 						id="email"
 						name="email"
 						placeholder="enter email of receiver"
 					/>
-					<button
-						type="submit"
-						className=""
-					>
-						Send
-					</button>
+					<div className="border border-gray-300 px-[18px] py-[10px] rounded-lg active:border-none send-btn text-white">
+						<button type="submit">send</button>
+					</div>
 				</div>
-				<div className=" flex flex-col ">
-					<label for="website">Video Url</label>
-					<div className="px-[24px] py-[12px] bg-gray-100 w-2/3 border border-gray-300 rounded-xl flex justify-between">
+				<div className=" flex flex-col  gap-[16px]">
+					<label
+						for="website"
+						className="text-black font-semibold text-[20px] leading-normal"
+					>
+						Video Url
+					</label>
+					<div className="px-[24px] py-[12px] bg-gray-100 w-2/3 border border-gray-300 rounded-xl flex justify-between items-center">
 						<h1>https://www.helpmeout/Untitled_Video_20232509</h1>
-						<button type="submit">Submit</button>
+						<div className="border border-blue-950 px-[18px] py-[10px] rounded-lg">
+							<button type="submit">Copy</button>
+						</div>
 					</div>
 				</div>
 			</div>

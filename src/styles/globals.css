@@ -29,3 +29,8 @@ body{
 .vid-title {
     color: #413C6D;
 }
+
+.send-btn {
+    background: var(--primary-primary-300, #605C84);
+    
+}
