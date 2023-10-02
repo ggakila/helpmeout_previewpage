@@ -6,7 +6,7 @@ export default function App({ Component, pageProps }) {
 		<>
 			<Head>
 				<title>HelpMeOut</title>
-				<link rel="icon" type="image/x-icon" href="/images/helpmeout.png"/>
+				<link rel="icon" type="image/x-icon" href="/images/helpmeout.svg"/>
 			</Head>
 				<Component {...pageProps} />
 

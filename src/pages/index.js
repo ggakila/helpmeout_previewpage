@@ -4,12 +4,12 @@ import Image from "next/image";
 import Footer from "@/components/Footer";
 import Link from "next/link"
 
-export default function Homepage() {
+export default function Home() {
 	return (
 		<div className="overflow-x-hidden">
 			<Header className="" />
-			<div className="home-content h-full  flex px-[100px]">
-				<div className="left w-1/2 flex flex-col flex-wrap justify-center pr-[80px] py-[250px] ">
+			<div className="home-content h-[700px]  flex px-[100px]">
+				<div className="left w-1/2 flex flex-col justify-center pr-[80px] py-[250px] ">
 					<h1 className="text-[64px] font-bold leading-[100%] wrap">
 						Show Them{" "}
 					</h1>
@@ -21,18 +21,19 @@ export default function Homepage() {
 						how to get things done on a website.
 					</p>
 
-					<div className="mt-[50px]">
+					<div className="flex flex-col gap-[0px]">
 						<a
 							href="https://github.com/ggakila/chrome_ext"
-							className="text-[18px] font-[500] text-white bg-blue-950 w-[230px] h-[65px] text-center p-[22px] border rounded-xl mt-[40px]"
+              target="_blank"
+							className="text-[18px] font-[500] text-white bg-blue-950 w-[230px] h-[65px] text-center p-[22px] border rounded-xl mt-[20px]"
 						>
 							Install HelpMeOut
 						</a>
 						<Link
 							href="/Myvideos"
-							className="text-[18px] font-[500] text-white bg-blue-950 w-[230px] h-[65px] text-center p-[22px] border rounded-xl mt-[40px]"
+							className="text-[18px] font-[500] text-white bg-blue-950 w-[230px] h-[65px] text-center p-[22px] border rounded-xl mt-[20px]"
 						>
-							Go to Recent Videos
+							Recent Videos
 						</Link>
 					</div>
 				</div>
