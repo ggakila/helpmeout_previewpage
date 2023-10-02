@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Header() {
 	return (
-		<div className="header w-screen h-[100px] flex justify-between items-center px-[100px]">
+		<div className="header w-screen h-[100px] my-[40px] flex justify-between items-center px-[100px]">
 			<div className="flex items-center gap-[8px]">
 				<div className="w-[40px] h-[40px] relative">
 				<Image 

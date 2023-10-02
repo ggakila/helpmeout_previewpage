@@ -3,21 +3,21 @@ import React, {useState, useEffect} from "react";
 
 export default function Previewcontent() {
     const [videoUrl, setVideoUrl] = useState(null);
-    useEffect(() => {
-			// Fetch the video URL that we recorded from from your API endpoint
-			fetch("https://your-api-endpoint")
-				.then((response) => response.json())
-				.then((data) => {
-					setVideoUrl(data.videoUrl);
-				})
-				.catch((error) => {
-					console.error("Error fetching video URL:", error);
-				});
-		}, []);
+    // useEffect(() => {
+	// 		// Fetch the video URL that we recorded from from your API endpoint
+	// 		fetch("https://your-api-endpoint")
+	// 			.then((response) => response.json())
+	// 			.then((data) => {
+	// 				setVideoUrl(data.videoUrl);
+	// 			})
+	// 			.catch((error) => {
+	// 				console.error("Error fetching video URL:", error);
+	// 			});
+	// 	}, []);
 
 	return (
-		<div className="h-[600px]  w-full pt-[40px] flex">
-			<div className="left w-1/2 flex flex-col gap-[50px]">
+		<div className="h-full  w-full pt-[40px] flex flex-col md:flex-row">
+			<div className="left w-full md:w-1/2 flex flex-col gap-[50px]">
 				<h1 className="readyvideo text-black text-[45px] font-bold">
 					Your video is ready!
 				</h1>
@@ -55,17 +55,25 @@ export default function Previewcontent() {
 						</div>
 					</div>
 					<div className="flex flex-col">
-						<h1>Share your video</h1>
-						<div classname="socials w-full flex">
-							<div className="text-[16px] font-medium border w-1/3 ">Facebook</div>
-							<div className="text-[16px] font-medium border w-1/3 ">Whatsapp</div>
-							<div className="text-[16px] font-medium border w-1/3 ">Telegram</div>
+						<h1 className="text-[16px] font-semibold leading-normal">
+							Share your video
+						</h1>
+						<div className="socials flex gap-[8px] w-full mt-2">
+							<button className="text-[16px] font-medium border mr-3 px-[10px] py-[6px] ">
+								Facebook
+							</button>
+							<button className="text-[16px] font-medium border mr-3 px-[10px] py-[6px] ">
+								Whatsapp
+							</button>
+							<button className="text-[16px] font-medium border mr-3 px-[10px] py-[6px] ">
+								Telegram
+							</button>
 						</div>
 					</div>
 				</div>
 			</div>
-            <div className="h-full w-[2px] bg-gray-200 m-6"></div>
-			<div className="right w-1/2">
+			<div className="h-full w-[2px] bg-gray-200 m-6"></div>
+			<div className="right w-full md:w-1/2">
 				{/* {videoUrl ? ( */}
 				<video
 					controls
@@ -81,9 +89,9 @@ export default function Previewcontent() {
 				{/* ) : (
 					<p>Loading video...</p>
 				)} */}
-                <div className="mt-[50px] text-[24px] font-semibold text-black">
-                    <h1>Transcript</h1>
-                </div>
+				<div className="mt-[50px] text-[24px] font-semibold text-black">
+					<h1>Transcript</h1>
+				</div>
 			</div>
 		</div>
 	);

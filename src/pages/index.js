@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 import Previewcontent from "@/components/Previewcontent"
 import Savevid from "@/components/Savevid"
@@ -7,6 +8,7 @@ export default function Home() {
       <Header />
       <Previewcontent/>
       <Savevid/>
+      <Footer/>
       
     </div>
   )
