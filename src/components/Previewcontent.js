@@ -1,6 +1,20 @@
-import React from "react";
+'use client'
+import React, {useState, useEffect} from "react";
 
 export default function Previewcontent() {
+    const [videoUrl, setVideoUrl] = useState(null);
+    useEffect(() => {
+			// Fetch the video URL that we recorded from from your API endpoint
+			fetch("https://your-api-endpoint")
+				.then((response) => response.json())
+				.then((data) => {
+					setVideoUrl(data.videoUrl);
+				})
+				.catch((error) => {
+					console.error("Error fetching video URL:", error);
+				});
+		}, []);
+
 	return (
 		<div className="h-[600px]  w-full pt-[40px] flex">
 			<div className="left w-1/2 flex flex-col gap-[50px]">
@@ -40,19 +54,36 @@ export default function Previewcontent() {
 							<button type="submit">Copy</button>
 						</div>
 					</div>
+					<div className="flex flex-col">
+						<h1>Share your video</h1>
+						<div classname="socials w-full flex">
+							<div className="text-[16px] font-medium border w-1/3 ">Facebook</div>
+							<div className="text-[16px] font-medium border w-1/3 ">Whatsapp</div>
+							<div className="text-[16px] font-medium border w-1/3 ">Telegram</div>
+						</div>
+					</div>
 				</div>
 			</div>
+            <div className="h-full w-[2px] bg-gray-200 m-6"></div>
 			<div className="right w-1/2">
+				{/* {videoUrl ? ( */}
 				<video
 					controls
 					width="100%"
 					height="auto"
 				>
 					<source
-						src="https://www.example.com/path-to-your-video.mp4"
+						src="{videoUrl}"
 						type="video/mp4"
 					/>
+					Your browser does not support the video tag.
 				</video>
+				{/* ) : (
+					<p>Loading video...</p>
+				)} */}
+                <div className="mt-[50px] text-[24px] font-semibold text-black">
+                    <h1>Transcript</h1>
+                </div>
 			</div>
 		</div>
 	);
