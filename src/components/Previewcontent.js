@@ -1,6 +1,7 @@
+'use client'
 import React, { useState, useEffect } from "react";
 
-export default function PreviewContent() {
+export default function PreviewContent({}) {
 	const [videoUrl, setVideoUrl] = useState("");
 	useEffect(()=>{
 		setVideoUrl(`https://app.deveb.tech/api/livestream/cln9mg24v0015ozcp915llefp`)

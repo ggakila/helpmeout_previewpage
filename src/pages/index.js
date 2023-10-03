@@ -9,7 +9,7 @@ export default function Home() {
 		<div className="overflow-x-hidden">
 			<Header className="" />
 			<div className="home-content h-full  flex flex-col-reverse lg:flex-row px-[40px] md:px-[100px] mt-[20px]">
-				<div className="left w-full lg:w-1/2 flex flex-col items-center lg:justify-center lg:pr-[80px] py-[40px] lg:py-[250px] ">
+				<div className="left w-full lg:w-1/2 flex flex-col  lg:justify-center lg:pr-[80px] py-[40px] lg:py-[250px] ">
 					<h1 className="text-[24px]  lg:text-[48px] xl:text-[64px] font-bold leading-[100%] wrap">
 						Show Them{" "}
 					</h1>

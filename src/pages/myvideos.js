@@ -1,9 +1,27 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import { useRouter } from "next/router";
 import Link from "next/link"
 import Videocard from "@/components/Videocard";
 import Image from "next/image"
 
 export default function myvideos() {
+	const router = useRouter();
+	const { id } = router.query;
+	const [videoUrl, setVideoUrl] = useState(
+		"https://app.deveb.tech/api/livestream/cln9mg24v0015ozcp915llefp"
+	);
+	//  useEffect(() => {
+	// 			if (id) {
+	// 			fetch(`https://app.deveb.tech/api/livestream/${id}`)
+	// 				.then((response) => response.json())
+	// 				.then((data) => {
+	// 					setVideoUrl(data.videoUrl);
+	// 				})
+	// 				.catch((error) => {
+	// 					console.error("Error fetching video URL:", error);
+	// 				});
+	// 		}
+	// 	}, [id]);
 	return (
 		<div>
 			<div className="border">
@@ -66,7 +84,7 @@ export default function myvideos() {
 				</h1>
 				<div>
 					<Videocard
-						url={`https://app.deveb.tech/api/livestream/cln9mg24v0015ozcp915llefp`}
+						url={videoUrl}
 					/>
 				</div>
 			</div>
