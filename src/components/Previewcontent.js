@@ -1,19 +1,19 @@
-'use client'
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 
-export default function Previewcontent() {
-    const [videoUrl, setVideoUrl] = useState(null);
-    // useEffect(() => {
-	// 		// Fetch the video URL that we recorded from from your API endpoint
-	// 		fetch("https://your-api-endpoint")
-	// 			.then((response) => response.json())
-	// 			.then((data) => {
-	// 				setVideoUrl(data.videoUrl);
-	// 			})
-	// 			.catch((error) => {
-	// 				console.error("Error fetching video URL:", error);
-	// 			});
-	// 	}, []);
+export default function PreviewContent() {
+	const [videoUrl, setVideoUrl] = useState(null);
+
+	useEffect(() => {
+		// Fetch the video URL from your API endpoint
+		fetch("http://app.deveb.tech:5555/")
+			.then((response) => response.json())
+			.then((data) => {
+				setVideoUrl(data.videoUrl);
+			})
+			.catch((error) => {
+				console.error("Error fetching video URL:", error);
+			});
+	}, []);
 
 	return (
 		<div className="h-full  w-full pt-[10px] md:pt-[40px] flex flex-col md:flex-row">
@@ -64,7 +64,6 @@ export default function Previewcontent() {
 					</div>
 				</div>
 				<div className=" flex flex-col  gap-[16px]">
-					
 					<div className="flex flex-col">
 						<h1 className="text-[16px] font-semibold leading-normal">
 							Share your video
@@ -85,26 +84,25 @@ export default function Previewcontent() {
 			</div>
 			<div className="h-full w-[2px] bg-gray-200 m-6"></div>
 			<div className="right w-full md:w-1/2">
-				{/* {videoUrl ? ( */}
-				<video
-					controls
-					width="100%"
-					height="auto"
-				>
-					<source
-						src="{videoUrl}"
-						type="video/mp4"
-					/>
-					Your browser does not support the video tag.
-				</video>
-				{/* ) : (
+				{videoUrl ? (
+					<video
+						controls
+						width="100%"
+						height="auto"
+					>
+						<source
+							src={videoUrl}
+							type="video/mp4"
+						/>
+						Your browser does not support the video tag.
+					</video>
+				) : (
 					<p>Loading video...</p>
-				)} */}
+				)}
 				<div className="mt-[50px] text-[24px] font-semibold text-black">
 					<h1>Transcript...</h1>
 				</div>
 			</div>
 		</div>
 	);
-	a;
 }
