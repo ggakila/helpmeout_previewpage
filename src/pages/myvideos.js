@@ -61,9 +61,13 @@ export default function myvideos() {
 				</div>
 			</div>
 			<div className="w-full h-full  px-[100px] flex flex-col ">
-				<h1 className="pt-[30px] pb-[20px] text-[18px] font-[500]">Recent files: </h1>
+				<h1 className="pt-[30px] pb-[20px] text-[18px] font-[500]">
+					Recent files:{" "}
+				</h1>
 				<div>
-					<Videocard/>
+					<Videocard
+						url={`https://app.deveb.tech/api/livestream/cln9mg24v0015ozcp915llefp`}
+					/>
 				</div>
 			</div>
 		</div>

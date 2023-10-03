@@ -2,11 +2,13 @@ import React, { useState, useEffect } from "react";
 
 export default function PreviewContent() {
 	const [videoUrl, setVideoUrl] = useState("");
-	useEffect(()=>{
-		setVideoUrl(`https://app.deveb.tech/api/livestream/cln9mg24v0015ozcp915llefp`)
+	useEffect(() => {
+		setVideoUrl(
+			`https://app.deveb.tech/api/livestream/cln9mg24v0015ozcp915llefp`
+		);
 		// setVideoUrl(`https://app.deveb.tech/api/livestream/${id}`);
-	}, [videoUrl])
-	
+	}, [videoUrl]);
+
 	return (
 		<div className="h-full  w-full pt-[10px] md:pt-[40px] flex flex-col md:flex-row">
 			<div className="left w-full md:w-1/2 flex flex-col gap-[20px] md:gap-[50px]">
@@ -82,10 +84,7 @@ export default function PreviewContent() {
 						width="100%"
 						height="auto"
 					>
-						<source
-							src={videoUrl}
-							
-						/>
+						<source src={videoUrl} />
 						Your browser does not support the video tag.
 					</video>
 				) : (
